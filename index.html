@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Homepage</title>
+    <title>Stylish Personal Homepage</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #f9f9f9;
+            color: #444;
         }
         header {
             background-color: #333;
@@ -22,17 +23,33 @@
             margin: 20px auto;
             padding: 20px;
             background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
-        h1, p {
+        h1, h2, p {
             text-align: center;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        li {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 5px 10px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 20px;
+        }
+        li:hover {
+            background-color: #555;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Personal Homepage</h1>
+        <h1>Stylish Personal Homepage</h1>
     </header>
     <div class="container">
         <h2>Personal Information</h2>
@@ -42,6 +59,8 @@
         <h2>Interests</h2>
         <ul>
             <li>Basketball</li>
+            <li>Coding</li>
+            <li>Reading</li>
         </ul>
         <h2>Contact Information</h2>
         <p>Email: None</p>
