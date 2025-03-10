@@ -59,12 +59,12 @@
             <span class="author-block">
               <a href="https://github.com/EastbeanZhang">Dongbin Zhang</a><sup>1*</sup>,</span>
             <span class="author-block">
-              <a href=javascript:void(0)>Yunfei Liu</a><sup>1*;</sup>,</span>
+              <a href=https://liuyunfei.net/>Yunfei Liu</a><sup>1*;</sup>,</span>
             <span class="author-block">
-              <a href=javascript:void(0)>Lijian Lin</a><sup>1</sup>,
+              <a href=https://scholar.google.com/citations?hl=en&user=Xf5_TfcAAAAJ>Lijian Lin</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?hl=en&user=LYX4AOEAAAAJ">Ye Zhu</a><sup>1</sup>,
+              <a href="https://scholar.google.com/citations?hl=en&user=qhp9rIMAAAAJ">Ye Zhu</a><sup>1</sup>,
             </span>
             <span class="author-block">
               <a href="javascript:void(0)">Kangjie Chen</a><sup>1</sup>,
@@ -73,7 +73,7 @@
               <a href="https://github.com/minghanqin">Minghan Qin</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.sigs.tsinghua.edu.cn/whq_en/main.htm">Yu Li</a><sup>1&#134;</sup>
+              <a href="https://yu-li.github.io/">Yu Li</a><sup>1&#134;</sup>
             </span>
             <span class="author-block">
               <a href="https://www.sigs.tsinghua.edu.cn/whq_en/main.htm">Haoqian Wang</a><sup>1&#134;</sup>
@@ -86,17 +86,18 @@
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Tsinghua Shenzhen International Graduate School, Tsinghua University</span>
+            <span class="author-block"><sup>2</sup>International Digital Economy Academy (IDEA)</span>
           </div>
           
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><b>Accepted to ECCV 2024 </b></font></span>
+            <span class="author-block"><b> CVPR 2025 </b></font></span>
           </div>
           
            <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2403.15704"
+                <a href="javascript:void(0)"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -106,7 +107,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2403.15704"
+                <a href="javascript:void(0)"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -118,13 +119,13 @@
              
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/EastbeanZhang/Gaussian-Wild"
+                <a href="javascript:void(0)"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
                   
-                  <span>Code</span>
+                  <span>Code (Comming soon)</span>
                   </a>
               </span>
             </div>
@@ -142,11 +143,11 @@
       <div class="column is-four-fifths">
         <div class="content has-text-justified">
           <p>
-            We utilize 3D Gaussian Splatting with introduced separated intrinsic and dynamic appearance to reconstruct scenes from uncontrolled images, achieving high-quality results and a faster rendering speed.
+            We propose HRAvatar, a 3DGS-based method that reconstructs high-fidelity, relightable 3D head avatars.
           </p>
         </div>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com//embed/BNIX-OmIzgo"
+          <iframe src="javascript:void(0)"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
@@ -164,17 +165,15 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Novel view synthesis from unconstrained in-the-wild images remains a meaningful but challenging task. 
-            The photometric variation and transient occluders in those unconstrained images make it difficult to reconstruct 
-            the original scene accurately. Previous approaches tackle the problem by introducing a global appearance feature 
-            in Neural Radiance Fields (NeRF). However, in the real world, the unique appearance of each tiny point in a scene 
-            is determined by its independent intrinsic material attributes and the varying environmental impacts it receives. 
-            Inspired by this fact, we propose Gaussian in the wild (GS-W), a method that uses 3D Gaussian points to reconstruct 
-            the scene and introduces separated intrinsic and dynamic appearance feature for each point, capturing the unchanged 
-            scene appearance along with dynamic variation like illumination and weather. Additionally, an adaptive sampling 
-            strategy is presented to allow each Gaussian point to focus on the local and detailed information more effectively. 
-            We also reduce the impact of transient occluders using a 2D visibility map. More experiments have demonstrated better 
-            reconstruction quality and details of GS-W compared to previous methods, with faster rendering speed.
+            Reconstructing animatable and high-quality 3D head avatars from monocular videos, especially with realistic relighting, is a valuable task. 
+            However, the limited information from single-view input, combined with the complex head poses and facial movements, makes this challenging. 
+            Previous methods achieve real-time performance by combining 3D Gaussian Splatting with a parametric head model, but the resulting head quality 
+            suffers from inaccurate face tracking and limited expressiveness of the deformation model. These methods also fail to produce realistic effects 
+            under novel lighting conditions. To address these issues, we propose HRAvatar, a 3DGS-based method that reconstructs high-fidelity, relightable 
+            3D head avatars. HRAvatar reduces tracking errors through end-to-end optimization and better captures individual facial deformations using 
+            learnable blendshapes and learnable linear blend skinning. Additionally, it decomposes head appearance into several physical properties and 
+            incorporates physically-based shading to account for environmental lighting. Extensive experiments demonstrate that HRAvatar not only reconstructs 
+            superior-quality heads but also achieves realistic visual effects under varying lighting conditions.
           </p>
         </div>
       </div>
@@ -193,8 +192,7 @@
         </div>
         <div class="content has-text-justified">
           <p>
-            With an unconstrained image collection input, our method can render novel views with appearance tuning, 
-            achieving a significantly faster rendering speed while maintaining state-of-the-art quality.
+            With monocular video input, HRAvatar reconstructs a high-quality, animatable 3D head avatar that enables realistic relighting effects and simple material editing.
           </p>
         </div>
         
