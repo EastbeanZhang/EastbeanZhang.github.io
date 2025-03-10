@@ -178,6 +178,12 @@
         <div class="content has-text-justified">
     <div class="hero-body">
       <img src="./static/images/pipeline.png"/>
+      <p style="font-size: 0.7em;">
+      Given a monocular video with unknown lighting, we first track the fixed shape parameter and pose parameters through iterative optimization before training. 
+      Expression parameters and jaw poses are estimated via an expression encoder, which is optimized during training. With these parameters, 
+      we transform the Gaussian points into pose space using learnable linear blendshapes and linear blend skinning. We then render the Gaussian 
+      points to obtain albedo, roughness, reflectance, and normal maps. Finally, we compute pixel colors using physically-based shading with optimizable environment maps.
+        <p>
         </div>
         </div>
       </div>
