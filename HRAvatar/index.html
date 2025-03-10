@@ -1,1 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Gaussian in the Wild">
+  <meta name="keywords" content="GS-W, 3D Gaussian Splatting, Unconstrained image collections">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GS-W: Gaussian in the Wild</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/logo.png">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+  <body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://github.com/EastbeanZhang">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+    </div>
+</nav>
+
+  <section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Gaussian in the Wild: 3D Gaussian Splatting for Unconstrained Image Collections </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://github.com/EastbeanZhang">Dongbin Zhang</a><sup>1*</sup>,</span>
+            <span class="author-block">
+              <a href=javascript:void(0)>Chuming Wang</a><sup>1*;</sup>,</span>
+            <span class="author-block">
+              <a href=javascript:void(0)>Weitao Wang</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=LYX4AOEAAAAJ">Peihao Li</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://github.com/minghanqin">Minghan Qin</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.sigs.tsinghua.edu.cn/whq_en/main.htm">Haoqian Wang</a><sup>1&#134;</sup>
+            </span>
+
+            <span class="author-block">
+              (* indicates equal contribution, &#134; means corresponding author)
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Tsinghua Shenzhen International Graduate School, Tsinghua University</span>
+          </div>
+          
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><b>Accepted to ECCV 2024 </b></font></span>
+          </div>
+          
+           <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2403.15704"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2403.15704"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                 
+                  <span>arXiv</span>
+                </a>
+              </span>
+             
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/EastbeanZhang/Gaussian-Wild"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p>
+            We utilize 3D Gaussian Splatting with introduced separated intrinsic and dynamic appearance to reconstruct scenes from uncontrolled images, achieving high-quality results and a faster rendering speed.
+          </p>
+        </div>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com//embed/BNIX-OmIzgo"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Novel view synthesis from unconstrained in-the-wild images remains a meaningful but challenging task. 
+            The photometric variation and transient occluders in those unconstrained images make it difficult to reconstruct 
+            the original scene accurately. Previous approaches tackle the problem by introducing a global appearance feature 
+            in Neural Radiance Fields (NeRF). However, in the real world, the unique appearance of each tiny point in a scene 
+            is determined by its independent intrinsic material attributes and the varying environmental impacts it receives. 
+            Inspired by this fact, we propose Gaussian in the wild (GS-W), a method that uses 3D Gaussian points to reconstruct 
+            the scene and introduces separated intrinsic and dynamic appearance feature for each point, capturing the unchanged 
+            scene appearance along with dynamic variation like illumination and weather. Additionally, an adaptive sampling 
+            strategy is presented to allow each Gaussian point to focus on the local and detailed information more effectively. 
+            We also reduce the impact of transient occluders using a 2D visibility map. More experiments have demonstrated better 
+            reconstruction quality and details of GS-W compared to previous methods, with faster rendering speed.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+</section>
+
+    
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        
+        <div class="hero-body">
+          <img src="./static/images/teaser.png"/>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            With an unconstrained image collection input, our method can render novel views with appearance tuning, 
+            achieving a significantly faster rendering speed while maintaining state-of-the-art quality.
+          </p>
+        </div>
+        
+        <h3 class="title is-4">Reconstruction scenes with variant appearance</h3>
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                  controls
+                  muted
+                  preload
+                  playsinline
+                  width="100%">
+            <source src="./static/videos/Visual Effects Showcase Brandenburg.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                  controls
+                  muted
+                  preload
+                  playsinline
+                  width="100%">
+            <source src="./static/videos/Visual Effects Showcase Sacre.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                  controls
+                  muted
+                  preload
+                  playsinline
+                  width="100%">
+            <source src="./static/videos/Visual Effects Showcase Trevi.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        
+        <h3 class="title is-4">Novel View Synthesis</h3>
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                  controls
+                  muted
+                  preload
+                  playsinline
+                  width="100%">
+            <source src="./static/videos/Novel View Compare Brandenburg.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                  controls
+                  muted
+                  preload
+                  playsinline
+                  width="100%">
+            <source src="./static/videos/Novel View Compare Sacre.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        
+            <div class="content has-text-centered">
+          <video id="replay-video"
+                  controls
+                  muted
+                  preload
+                  playsinline
+                  width="100%">
+            <source src="./static/videos/Novel View Compare Trevi.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+         <h3 class="title is-4">Appearance tuning</h3>
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                  controls
+                  muted
+                  preload
+                  playsinline
+                  width="100%">
+            <source src="./static/videos/Appear Tuning Brandenburg.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                  controls
+                  muted
+                  preload
+                  playsinline
+                  width="100%">
+            <source src="./static/videos/Appear Tuning Sacre.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+          <div class="content has-text-centered">
+          <video id="replay-video"
+                  controls
+                  muted
+                  preload
+                  playsinline
+                  width="100%">
+            <source src="./static/videos/Appear Tuning Trevi.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        
+          <div class="hero-body">
+          <img src="./static/images/appear tuning.png"/>
+        </div>
+        
+          <div class="content has-text-justified">
+          <p>
+           Images are rendered at the same camera pose with increasing weight of features extracted from the image. 
+            Our method incorporates environmental factors, like highlights on pillars and enhancing illumination, 
+            in a manner that is closer to human understanding.
+          </p>
+        </div>
+
+        <h3 class="title is-4">Visual comparison on test set</h3>
+        <div class="hero-body">
+          <img src="./static/images/qualitative.png"/>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Qualitative experimental results on three unconstrained datasets. GS-W recovers finer details of appearance 
+            and reconstructs more detailed geometry.
+          </p>
+        </div>
+        
+        
+    </div>
+    </div>
+  </div>
+</section>
+    
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{zhang2024gaussian,
+  title={Gaussian in the Wild: 3D Gaussian Splatting for Unconstrained Image Collections},
+  author={Zhang, Dongbin and Wang, Chuming and Wang, Weitao and Li, Peihao and Qin, Minghan and Wang, Haoqian},
+  journal={arXiv preprint arXiv:2403.15704},
+  year={2024}
+}</code></pre>
+  </div>
+</section>
+    
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            The souce code is borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">nerfies</a>,
+              we thank the authors for sharing the templates.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
 
