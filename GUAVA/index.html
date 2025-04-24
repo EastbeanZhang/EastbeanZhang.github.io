@@ -143,7 +143,7 @@
   </div>
 </section>
 
-<section class="section"> 
+<!-- <section class="section"> 
     <!-- Paper video. --> 
     <div class="columns is-centered has-text-centered"> 
         <div class="column is-four-fifths"> 
@@ -157,7 +157,7 @@
 
     </div>
     </div>
-  </section>
+  </section> -->
 
     
 <section class="section">
@@ -168,15 +168,17 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Reconstructing animatable and high-quality 3D head avatars from monocular videos, especially with realistic relighting, is a valuable task. 
-            However, the limited information from single-view input, combined with the complex head poses and facial movements, makes this challenging. 
-            Previous methods achieve real-time performance by combining 3D Gaussian Splatting with a parametric head model, but the resulting head quality 
-            suffers from inaccurate face tracking and limited expressiveness of the deformation model. These methods also fail to produce realistic effects 
-            under novel lighting conditions. To address these issues, we propose HRAvatar, a 3DGS-based method that reconstructs high-fidelity, relightable 
-            3D head avatars. HRAvatar reduces tracking errors through end-to-end optimization and better captures individual facial deformations using 
-            learnable blendshapes and learnable linear blend skinning. Additionally, it decomposes head appearance into several physical properties and 
-            incorporates physically-based shading to account for environmental lighting. Extensive experiments demonstrate that HRAvatar not only reconstructs 
-            superior-quality heads but also achieves realistic visual effects under varying lighting conditions.
+            Reconstructing a high-quality, animatable 3D human avatar with expressive facial and hand motions from a single 
+            image has gained significant attention due to its broad application potential. 3D human avatar reconstruction 
+            typically requires multi-view or monocular videos and training on individual IDs, which is both complex and 
+            time-consuming. Furthermore, limited by SMPLX’s expressiveness, these methods often focus on body motion but 
+            struggle with facial expressions. To address these challenges, we first introduce an expressive human model (EHM) 
+            to enhance facial expression capabilities and develop an accurate tracking method. Based on this template model, 
+            we propose GUAVA, the first framework for fast animatable upper-body 3D Gaussian avatar reconstruction. We leverage 
+            inverse texture mapping and projection sampling techniques to infer Ubody (upper-body) Gaussians from a single image. 
+            The rendered images are refined through a neural refiner. Experimental results demonstrate that GUAVA significantly 
+            outperforms previous methods in rendering quality and offers significant speed improvements, 
+            with reconstruction times in the sub-second range ($\sim$ 0.1s), and supports real-time animation and rendering.
           </p>
         </div>
   </div>
@@ -185,7 +187,8 @@
     <div class="hero-body">
       <img src="./static/images/teaser.png"/>
           <p style="font-size: 0.85em;">
-            With monocular video input, HRAvatar reconstructs a high-quality, animatable 3D head avatar that enables realistic relighting effects and simple material editing.
+            For each single image, GUAVA can reconstruct a 3D upper-body Gaussian avatar via feed-forward inference within sub-second time, 
+            enabling real-time expressive animation and novel view synthesis at 512✖️512 resolution. 
           </p>
         </div>
 </section>
