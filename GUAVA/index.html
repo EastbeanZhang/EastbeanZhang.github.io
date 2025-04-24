@@ -395,10 +395,12 @@
       <img src="./static/images/pipeline.png" style="width: 100%; max-width: 100%;" />
     
       <p style="font-size: 0.85em;">
-      Given a monocular video with unknown lighting, we first track the fixed shape parameter and pose parameters through iterative optimization before training. 
-      Expression parameters and jaw poses are estimated via an expression encoder, which is optimized during training. With these parameters, 
-      we transform the Gaussian points into pose space using learnable linear blendshapes and linear blend skinning. We then render the Gaussian 
-      points to obtain albedo, roughness, reflectance, and normal maps. Finally, we compute pixel colors using physically-based shading with optimizable environment maps.
+        Given the source and target images, we first obtain the shape, expression, and pose parameters of the 
+        EHM template model through tracking. The source image is then passed through an image encoder to extract 
+        an appearance feature map. Using these features and the tracked EHM, one branch predicts the template Gaussians, 
+        and the other predicts the UV Gaussians. These are combined to form the Ubody Gaussians in canonical space, 
+        which are then deformed into pose space using the tracked parameters from the target image. Finally, a coarse 
+        feature map is rendered and refined by a neural refiner to produce the final image.
         <p>
     </div>    
     </div>
@@ -411,11 +413,7 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{zhang2025hravatar,
-  title={HRAvatar: High-Quality and Relightable Gaussian Head Avatar},
-  author={Zhang, Dongbin and Liu, Yunfei and Lin, Lijian and Zhu, Ye and Chen, Kangjie and Qin, Minghan and Li, Yu and Wang, Haoqian},
-  journal={arXiv preprint arXiv:2503.08224},
-  year={2025}
+    <pre><code>
 }</code></pre>
   </div>
 </section>
