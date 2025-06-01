@@ -11,7 +11,7 @@ title                    : "Eastbean - Homepage"
 title_separator          : "-"
 name                     : &name "Dongbin Zhang"
 description              : &description "3D CV"
-url                      : https://xingyoujun.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://EastbeanZhang.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "EastbeanZhang/EastbeanZhang.github.io"
 google_scholar_stats_use_cdn : true
