@@ -37,11 +37,11 @@ More about me through [CV-cn](_pages/files/Eastbean_CV.pdf).
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ECCV 2024</div><img src='_pages/files/GS-W.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-<a href="https://arxiv.org/abs/2407.06984" style="font-size: 22px; color: #483D8B; text-decoration: none">**Category-level Object Detection, Pose Estimation and Reconstruction from Stereo Images**</a><br>
-<span style="font-size: 18px;">**Chuanrui Zhang\*** , Yonggen Ling\*†, Minglei Lu, Minghan Qin, Haoqian Wang†</span><br>
-<span style="font-size: 18px;">[**Website**](https://xingyoujun.github.io/coders)   [**Paper**](https://arxiv.org/abs/2407.06984)   [**Code**](#todo)</span>
+<a href="https://arxiv.org/abs/2407.06984" style="font-size: 22px; color: #483D8B; text-decoration: none">**Gaussian in the Wild: 3D Gaussian Splatting for Unconstrained Image Collections**</a><br>
+<span style="font-size: 18px;">**Dongbin Zhang\*** , Chuming Wang\*, Weitao Wang, Peihao Li, Minghan Qin, Haoqian Wang†</span><br>
+<span style="font-size: 18px;">[**Web Page**](https://eastbeanzhang.github.io/GS-W/)   [**Paper**](https://arxiv.org/pdf/2403.15704)   [**Code**](https://github.com/EastbeanZhang/Gaussian-Wild)</span>
 
-<span style="font-size: 18px;">-  We present CODERS, a one-stage approach for Category-level Object Detection, pose Estimation and Reconstruction from Stereo images.</span>
+<span style="font-size: 18px;">-  GS-W utilizes 3D Gaussian Splatting with introduced separated intrinsic and dynamic appearance to reconstruct scenes from uncontrolled images, achieving high-quality results.</span>
 
 </div>
 </div>
