@@ -18,12 +18,13 @@ redirect_from:
 
 # 🧑 About me
 
-I am currently a 2rd-Year Master student at [Tsinghua University](https://www.tsinghua.edu.cn/en/), under the guidance of [Prof. Haoqian Wang](https://www.sigs.tsinghua.edu.cn/whq/). I got B.Eng. degree in Robot Engineering at [South China University of Technology](https://www.scut.edu.cn/). 
+I am currently a 2nd-Year Master student at [Tsinghua University](https://www.tsinghua.edu.cn/en/), under the guidance of [Prof. Haoqian Wang](https://www.sigs.tsinghua.edu.cn/whq/). I got B.Eng. degree in Robot Engineering at [South China University of Technology](https://www.scut.edu.cn/). 
 
 Currently, I’m interested in 3D computer vision, specializing in ​​human-centric tasks such as digital avatar creation and 3D scene reconstruction, leveraging techniques including 3D Gaussian Splatting.​
  
 More about me through [CV-cn](_pages/files/Eastbean_CV.pdf).
 
+<br>
 
 # 💻 Experience
 
