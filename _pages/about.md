@@ -49,11 +49,11 @@ More about me through [CV-cn](_pages/files/Eastbean_CV.pdf).
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2025</div><img src='_pages/files/HRAvatar.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-<a href="https://arxiv.org/abs/2408.13770" style="font-size: 22px; color: #483D8B; text-decoration: none">**TranSplat: Generalizable 3D Gaussian Splatting from Sparse Multi-View Images with Transformers**</a><br>
-<span style="font-size: 18px;">**Chuanrui Zhang\***, Yingshuang Zou\*, Zhuoling Li, Minmin Yi, Haoqian Wang†</span><br>
-<span style="font-size: 18px;">[**Website**](https://xingyoujun.github.io/transplat) [**Paper**](https://arxiv.org/abs/2408.13770)   [**Code**](https://github.com/xingyoujun/transplat)</span>
+<a href="https://arxiv.org/abs/2408.13770" style="font-size: 22px; color: #483D8B; text-decoration: none">**HRAvatar: High-Quality and Relightable Gaussian Head Avatar**</a><br>
+<span style="font-size: 18px;">**Dongbin Zhang**, Yunfei Liu, Lijian Lin, Ye Zhu, Kangjie Chen, Minghan Qin, Yu Li†, Haoqian Wang†</span><br>
+<span style="font-size: 18px;">[**Web Page**](https://eastbeanzhang.github.io/HRAvatar/) [**Paper**](https://arxiv.org/pdf/2503.08224)   [**Code**](https://github.com/Pixel-Talk/HRAvatar)</span>
 
-<span style="font-size: 18px;">-  We present TranSplat, a transformer-based approach for generalizable 3D gaussian splatting from sparse multi-view images.</span>
+<span style="font-size: 18px;">- With monocular video input, HRAvatar reconstructs a high-quality, animatable 3D head avatar that enables realistic relighting effects and simple material editing.</span>
 
 </div>
 </div>
