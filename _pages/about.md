@@ -32,7 +32,7 @@ More about me through [CV-cn](_pages/files/Eastbean_CV.pdf).
 <br>
 
 # 📝 Publications 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ECCV 2024</div><img src='images/coders_results.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ECCV 2024</div><img src='_pages/files/GS-W.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a href="https://arxiv.org/abs/2407.06984" style="font-size: 22px; color: #483D8B; text-decoration: none">**Category-level Object Detection, Pose Estimation and Reconstruction from Stereo Images**</a><br>
@@ -44,7 +44,7 @@ More about me through [CV-cn](_pages/files/Eastbean_CV.pdf).
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2025</div><img src='images/transplat.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2025</div><img src='_pages/files/HRAvatar.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a href="https://arxiv.org/abs/2408.13770" style="font-size: 22px; color: #483D8B; text-decoration: none">**TranSplat: Generalizable 3D Gaussian Splatting from Sparse Multi-View Images with Transformers**</a><br>
@@ -57,7 +57,7 @@ More about me through [CV-cn](_pages/files/Eastbean_CV.pdf).
 </div>
 
 # 📄 Preprint Papers
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/voxelformer.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='_pages/files/GUAVA.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a href="https://arxiv.org/abs/2304.01054" style="font-size: 22px; color: #483D8B; text-decoration: none">**VoxelFormer: Bird’s-Eye-View Feature Generation based on Dual-view Attention for Multi-view 3D Object Detection**</a><br>
@@ -71,7 +71,5 @@ More about me through [CV-cn](_pages/files/Eastbean_CV.pdf).
 
 # 🏆 Honors and Awards
 
-- Scholarship, Tsinghua University, 2023.
-- Excellent Graduates, Shanghai, 2022.
-- Scholarship, Tongji University, 2019-2022.
-- Nation Scholarship, 2018.
+- Scholarship, Tsinghua University, 2024.
+- Scholarship, South China University of Technology, 2019-2023.
