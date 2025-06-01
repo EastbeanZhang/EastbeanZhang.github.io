@@ -26,10 +26,6 @@ More about me through [CV-cn](_pages/files/Eastbean_CV.pdf).
 
 <br>
 
-# 🔥 News
-* 2024.12:  🎉🎉 1 paper accepted to AAAI 2025 !!!
-
-<br>
 
 # 💻 Experience
 
