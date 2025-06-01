@@ -21,7 +21,7 @@ google_scholar_stats_use_cdn : true
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : #"zcr.png"
+  avatar           : _pages/files/profile.jpg
   name             : "Dongbin Zhang"
   pronouns         : # example: "she/her"  
   bio              : "Basketball🏀"
