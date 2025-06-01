@@ -18,24 +18,16 @@ redirect_from:
 
 # 🧑 About me
 
-I am currently a 3rd-Year Master student at [Tsinghua University](https://www.tsinghua.edu.cn/en/), under the guidance of [Prof. Haoqian Wang](https://www.sigs.tsinghua.edu.cn/whq/). I got B.Eng. degree in College of Electronic and Information Engineering at [Tongji University](https://en.tongji.edu.cn/). 
+I am currently a 2rd-Year Master student at [Tsinghua University](https://www.tsinghua.edu.cn/en/), under the guidance of [Prof. Haoqian Wang](https://www.sigs.tsinghua.edu.cn/whq/). I got B.Eng. degree in Robot Engineering at [South China University of Technology](https://www.scut.edu.cn/). 
 
-Currently, my research topic is 3D computer vision, with a particular focus on 3D object detection for autonomous driving and robot manipulation. (e.g. BEV, OCC)
-
-**I am looking for a PhD position in Fall, 2025.**
+Currently, I’m interested in 3D computer vision, specializing in ​​human-centric tasks such as digital avatar creation and 3D scene reconstruction, leveraging techniques including 3D Gaussian Splatting.​
  
-[github](https://github.com/xingyoujun) / [google scholar](https://scholar.google.com.hk/citations?hl=zh-CN&user=sBYo2zQAAAAJ) / [cv](files/CV_chuanruizhang.pdf)
+More about me through [CV-cn](_pages/files/Eastbean_CV.pdf).
 
-<br>
-
-# 🔥 News
-* 2024.12:  🎉🎉 1 paper accepted to AAAI 2025 !!!
-
-<br>
 
 # 💻 Experience
 
-- 05/2023~now, I was a full-time intern at the [Tencent Robotics X](https://roboticsx.tencent.com/#/).
+08/2024 ~ 03/2025, I was a research intern at the [IDEA](https://www.idea.edu.cn/).
 
 <br>
 
