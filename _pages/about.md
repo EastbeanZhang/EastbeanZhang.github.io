@@ -26,6 +26,11 @@ More about me through [CV-cn](_pages/files/Eastbean_CV.pdf).
 
 <br>
 
+# 🔥 News
+* 2024.12:  🎉🎉 1 paper accepted to AAAI 2025 !!!
+
+<br>
+
 # 💻 Experience
 
 08/2024 ~ 03/2025, I was a research intern at the [IDEA](https://www.idea.edu.cn/).
