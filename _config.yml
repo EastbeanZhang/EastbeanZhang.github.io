@@ -146,7 +146,6 @@ analytics:
 include:
   - .htaccess
   - _pages
-  - hp_files
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
