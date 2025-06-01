@@ -62,11 +62,11 @@ More about me through [CV-cn](_pages/files/Eastbean_CV.pdf).
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='_pages/files/GUAVA.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-<a href="https://arxiv.org/abs/2304.01054" style="font-size: 22px; color: #483D8B; text-decoration: none">**VoxelFormer: Bird’s-Eye-View Feature Generation based on Dual-view Attention for Multi-view 3D Object Detection**</a><br>
-<span style="font-size: 18px;">Zhuoling Li\*, **Chuanrui Zhang\***, Wei-Chiu Ma, Yipin Zhou, Linyan Huang, Haoqian Wang†, SerNam Lim, Hengshuang Zhao†</span><br>
-<span style="font-size: 18px;">[**Paper**](https://arxiv.org/abs/2304.01054)   [**Code**](https://github.com/Lizhuoling/VoxelFormer-public)</span>
+<a href="https://arxiv.org/abs/2304.01054" style="font-size: 22px; color: #483D8B; text-decoration: none">**GUAVA: Generalizable Upper Body 3D Gaussian Avatar**</a><br>
+<span style="font-size: 18px;"> **Dongbin Zhang**, Yunfei Liu†, Lijian Lin, Ye Zhu, Yang Li, Minghan Qin, Yu Li‡, Haoqian Wang†</span><br>
+<span style="font-size: 18px;">[**Web Page**](https://eastbeanzhang.github.io/GUAVA/) [**Paper**](https://arxiv.org/pdf/2505.03351v1)</span>
 
-<span style="font-size: 18px;">-  We introduce Dual-View Attention, a more effecient cross attention for Multi-view 3D Object Detection.</span>
+<span style="font-size: 18px;">-  We propose GUAVA, the first framework for fast animatable upper-body 3D Gaussian avatar reconstruction from a single image.</span>
 
 </div>
 </div>
