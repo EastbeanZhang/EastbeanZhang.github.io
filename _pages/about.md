@@ -16,7 +16,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-# 🧑 About me
+# 👨‍🎓 About me
 
 I am currently a 2nd-Year Master student at [Tsinghua University](https://www.tsinghua.edu.cn/en/), under the guidance of [Prof. Haoqian Wang](https://www.sigs.tsinghua.edu.cn/whq/). I got B.Eng. degree in Robot Engineering at [South China University of Technology](https://www.scut.edu.cn/). 
 
