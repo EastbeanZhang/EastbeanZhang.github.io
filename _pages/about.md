@@ -22,8 +22,6 @@ I am currently a 2nd-Year Master student at [Tsinghua University](https://www.ts
 
 My current research interests lie in 3D computer vision and video generation, focusing on human-centric tasks like animatable digital avatar creation and 3D scene reconstruction. 
  
-More about me through [CV-cn](_pages/files/Eastbean_CV.pdf).
-
 <br>
 
 
