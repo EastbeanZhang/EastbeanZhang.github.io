@@ -29,7 +29,7 @@ More about me through [CV-cn](_pages/files/Eastbean_CV.pdf).
 
 # 💻 Experience
 
-- 2024.08 ~ 2025.03, I was a research intern at the [IDEA](https://www.idea.edu.cn/).
+- 2024.08 ~ 2025.03, I was a research intern at the [IDEA](https://www.idea.edu.cn/), advised by Yu Li[https://yu-li.github.io/] and Yunfei Liu[https://liuyunfei.net/].
 
 <br>
 
