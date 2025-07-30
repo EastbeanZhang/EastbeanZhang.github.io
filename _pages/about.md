@@ -58,8 +58,8 @@ More about me through [CV-cn](_pages/files/Eastbean_CV.pdf).
 </div>
 </div>
 
-# 📄 Preprint Papers
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/GUAVA.png' alt="sym" width="100%"></div></div>
+% # 📄 Preprint Papers
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICCV 2025</div><img src='images/GUAVA.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a href="https://arxiv.org/abs/2304.01054" style="font-size: 22px; color: #483D8B; text-decoration: none">**GUAVA: Generalizable Upper Body 3D Gaussian Avatar**</a><br>
@@ -73,7 +73,7 @@ More about me through [CV-cn](_pages/files/Eastbean_CV.pdf).
 
 # 🏆 Honors and Awards
 
-- National First Prize (0.7%), [CUMCM: China Undergraduate Mathematical Contest in Modeling](https://www.mcm.edu.cn/html_cn/node/5d988b4e510d9dc78168e258dc76a48f.html), 2021.
-- ​​Meritorious Winner​ (7%), [MCM: The Mathematical Contest in Modeling](https://www.comap.com/contests/mcm-icm), 2022.
+- National First Prize (top 0.7%), [CUMCM: China Undergraduate Mathematical Contest in Modeling](https://www.mcm.edu.cn/html_cn/node/5d988b4e510d9dc78168e258dc76a48f.html), 2021.
+- ​​Meritorious Winner​ (top 7%), [MCM: The Mathematical Contest in Modeling](https://www.comap.com/contests/mcm-icm), 2022.
 - Scholarship, Tsinghua University, 2024.
 - Scholarship, South China University of Technology, 2019-2023.
