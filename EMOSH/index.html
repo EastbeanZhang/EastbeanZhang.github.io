@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="EMOSH: Expressive Motion and Shape Disentanglement for Human Animation">
+  <meta name="keywords" content="Human Animation, Motion Disentanglement, Expressive Avatar, Diffusion, ECCV 2026">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="EMOSH - Expressive Motion and Shape Disentanglement for Human Animation">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://eastbeanzhang.github.io/EMOSH/">
+  <meta property="og:image" content="https://eastbeanzhang.github.io/EMOSH/static/images/teaser_big.png">
+  <meta property="og:description" content="High-fidelity controllable human video generation with expressive motion and shape disentanglement.">
+  <link rel="canonical" href="https://eastbeanzhang.github.io/EMOSH/">
+  <link rel="icon" href="./static/images/logo.svg" type="image/svg+xml">
+  <title>EMOSH - Project Page</title>
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif; }
+    .publication-title, .publication-authors { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+
+    .emote-gradient {
+      background: linear-gradient(135deg, #F97316, #EC4899, #8B5CF6, #EC4899, #F97316);
+      background-size: 300% 300%;
+      -webkit-background-clip: text; background-clip: text;
+      color: transparent; font-weight: bold; display: inline-block;
+      animation: gradient-shift 3s ease infinite;
+    }
+    @keyframes gradient-shift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    hr.divider { border: none; height: 1px; background: linear-gradient(90deg, transparent, #ddd, transparent); margin: 0.5rem 0 1.5rem; }
+
+    /* --- Sync Video --- */
+    .sync-group { margin: 24px 0 32px; }
+    .sync-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 10px; }
+    .sync-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .sync-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .sync-grid video { width: 100%; border-radius: 8px; background: #000; }
+    .sync-grid .vid-label { text-align: center; font-size: 0.78em; font-weight: 500; margin-top: 4px; color: #555; }
+    .sync-grid .vid-label.ours { color: #EC4899; font-weight: 700; }
+
+    .sync-controls { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
+    .sync-btn { padding: 8px 22px; border: none; border-radius: 20px; font-size: 0.85em; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+    .sync-btn.play  { background: #EC4899; color: #fff; }
+    .sync-btn.play:hover  { background: #DB2777; }
+    .sync-btn.pause { background: #8B5CF6; color: #fff; }
+    .sync-btn.pause:hover { background: #7C3AED; }
+    .sync-btn.replay{ background: #e5e7eb; color: #374151; }
+    .sync-btn.replay:hover{ background: #d1d5db; }
+
+    .section-title { margin-bottom: 0.5rem !important; }
+
+    @media (max-width: 768px) {
+      .sync-grid, .sync-grid.cols-2, .sync-grid.cols-3 { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .sync-grid, .sync-grid.cols-2, .sync-grid.cols-3 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow:1;justify-content:center;">
+      <a class="navbar-item" href="https://eastbeanzhang.github.io/">🏠 Home</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ====== HERO ====== -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            <span class="emote-gradient">EMOSH</span>: Expressive Motion and Shape<br>Disentanglement for Human Animation
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://github.com/EastbeanZhang">Dongbin Zhang</a><sup>1,2*</sup>,</span>
+            <span class="author-block">Hao Liu<sup>2</sup>,</span>
+            <span class="author-block">Binquan Dai<sup>1</sup>,</span>
+            <span class="author-block"><a href="https://github.com/chenkangjie1123">Kangjie Chen</a><sup>1</sup>,</span>
+            <span class="author-block">Chuming Wang<sup>1</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=WDJL3gYAAAAJ&hl=zh-CN">Chen Li</a><sup>2†</sup>,</span>
+            <span class="author-block">Jing LYU<sup>2</sup>,</span>
+            <span class="author-block"><a href="https://www.sigs.tsinghua.edu.cn/whq_en/main.htm">Haoqian Wang</a><sup>1†</sup></span>
+            <br><span class="author-block" style="font-size:0.85em;">(* intern, † corresponding authors)</span>
+          </div>
+          <div class="is-size-5 publication-authors" style="margin-top:8px;">
+            <span class="author-block"><sup>1</sup>Tsinghua University</span>
+            &nbsp;&nbsp;
+            <span class="author-block"><sup>2</sup>WeChat Vision, Tencent Inc.</span>
+          </div>
+          <div class="is-size-3" style="margin-top:12px;"><b>ECCV 2026</b></div>
+          <div class="column has-text-centered" style="margin-top:16px;">
+            <div class="publication-links">
+              <span class="link-block"><a href="./static/EMOSH_ECCV2026.pdf" class="external-link button is-normal is-rounded is-dark">📄 Paper</a></span>
+              <span class="link-block"><a href="https://arxiv.org/abs/xxxx.xxxxx" class="external-link button is-normal is-rounded is-dark">📚 arXiv</a></span>
+              <span class="link-block"><a href="https://github.com/EastbeanZhang/EMOSH" class="external-link button is-normal is-rounded is-dark">💻 Code</a></span>
+              <span class="link-block"><a href="https://youtu.be/xxxxxxxxxxx" class="external-link button is-normal is-rounded is-dark">▶ YouTube</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== OVERVIEW ====== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Overview</h2>
+        <hr class="divider">
+        <img src="./static/images/teaser_big.png" style="width:100%;max-width:100%;border-radius:8px;" alt="EMOSH Teaser">
+        <p style="font-size:0.9em;margin-top:1rem;">
+          Given a reference image and a driving video, <span style="color:#EC4899;font-weight:600;">EMOSH</span> achieves
+          high-fidelity, mesh-guided expressive human animation while disentangling expressive motion from body shape.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== ABSTRACT ====== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <hr class="divider">
+        <div class="content has-text-justified">
+          <p>
+            High-fidelity and expressive controllable human animation is essential for content creation and digital avatar
+            applications. However, existing methods face a dilemma between expressiveness and disentanglement. Mainstream
+            2D pose-conditioned approaches suffer from "motion-shape entanglement", leading to the leakage of the driving
+            subject's body shape. Conversely, methods relying on 3D priors (e.g., SMPL) achieve geometric disentanglement
+            but struggle to capture facial expressions and complex gestures, resulting in rigid animations. To this end,
+            we propose <strong>EMOSH</strong>, a novel framework for high-fidelity controllable human video generation.
+            First, an <strong>Expressive Human Model (EHM)</strong> is introduced as the core control representation. By
+            explicitly disentangling shape and pose parameters, we fundamentally resolve the body shape leakage issue.
+            Alongside this, a robust motion tracker is designed to accurately estimate EHM parameters from video. Second,
+            we propose a <strong>Coarse-to-Fine Hybrid Motion Injection</strong> strategy, enabling more fine-grained
+            control over expressions and gestures. Furthermore, we introduce a <strong>Spatially-Aligned Conditioning</strong>
+            mechanism to bridge the domain gap between training and inference, improving identity consistency. Extensive
+            experiments demonstrate that EMOSH outperforms previous methods in both self-driven and cross-driven scenarios.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== VIDEO DEMO ====== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video Demo</h2>
+        <hr class="divider">
+        <video controls muted preload="metadata" playsinline width="100%" poster="./static/images/teaser_big.png" style="border-radius:8px;">
+          <source src="./static/videos/EMOTE_Video_Demo-small.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SELF-DRIVEN ====== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 section-title">Self-Driven</h2>
+        <hr class="divider">
+        <div class="sync-group" id="sync-self">
+          <div class="sync-grid cols-2">
+            <div>
+              <video muted playsinline loop><source src="./static/videos/selfact/buleman_dance.mp4" type="video/mp4"></video>
+            </div>
+            <div>
+              <video muted playsinline loop><source src="./static/videos/selfact/whiteman_slow_dance.mp4" type="video/mp4"></video>
+            </div>
+            <div>
+              <video muted playsinline loop><source src="./static/videos/selfact/g3ZluRtRXVc-3-rgb_front_clip.mp4" type="video/mp4"></video>
+            </div>
+            <div>
+              <video muted playsinline loop><source src="./static/videos/selfact/Clip+AAP4N3KyLmM+P0+C1+F31348-31655.mp4" type="video/mp4"></video>
+            </div>
+          </div>
+          <div class="sync-controls">
+            <button class="sync-btn play" onclick="syncPlay('sync-self')">▶ Play</button>
+            <button class="sync-btn pause" onclick="syncPause('sync-self')" style="display:none;">⏸ Pause</button>
+            <button class="sync-btn replay" onclick="syncReplay('sync-self')">↺ Replay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CROSS-DRIVEN (show_corss_act) ====== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 section-title">Cross-Driven</h2>
+        <hr class="divider">
+
+        <h4 class="title is-6 has-text-centered" style="margin-top:1.5rem;">Multi-Identity → Same Motion</h4>
+        <div class="sync-group" id="sync-cross-a">
+          <div class="sync-grid">
+            <div><video muted playsinline loop><source src="./static/videos/crossact/man1_to_xJqLcJnRnnc_clip_crossact.mp4" type="video/mp4"></video></div>
+            <div><video muted playsinline loop><source src="./static/videos/crossact/woman1_to_xJqLcJnRnnc_clip_crossact.mp4" type="video/mp4"></video></div>
+            <div><video muted playsinline loop><source src="./static/videos/crossact/woman4_to_xJqLcJnRnnc_clip_crossact.mp4" type="video/mp4"></video></div>
+            <div>
+              <video muted playsinline loop><source src="./static/videos/crossact/xJqLcJnRnnc_clip_rgb.mp4" type="video/mp4"></video>
+              <div class="vid-label">Driving Motion</div>
+            </div>
+          </div>
+          <div class="sync-controls">
+            <button class="sync-btn play" onclick="syncPlay('sync-cross-a')">▶ Play</button>
+            <button class="sync-btn pause" onclick="syncPause('sync-cross-a')" style="display:none;">⏸ Pause</button>
+            <button class="sync-btn replay" onclick="syncReplay('sync-cross-a')">↺ Replay</button>
+          </div>
+        </div>
+
+        <h4 class="title is-6 has-text-centered" style="margin-top:2rem;">Multi-Identity → Same Motion (Dance)</h4>
+        <div class="sync-group" id="sync-cross-b">
+          <div class="sync-grid">
+            <div><video muted playsinline loop><source src="./static/videos/crossact/012_to_buleman_dance_crossact.mp4" type="video/mp4"></video></div>
+            <div><video muted playsinline loop><source src="./static/videos/crossact/021_to_buleman_dance_crossact.mp4" type="video/mp4"></video></div>
+            <div><video muted playsinline loop><source src="./static/videos/crossact/woman3_to_buleman_dance_crossact.mp4" type="video/mp4"></video></div>
+            <div>
+              <video muted playsinline loop><source src="./static/videos/crossact/buleman_dance_mesh.mp4" type="video/mp4"></video>
+              <div class="vid-label">Driving Motion (EHM Mesh)</div>
+            </div>
+          </div>
+          <div class="sync-controls">
+            <button class="sync-btn play" onclick="syncPlay('sync-cross-b')">▶ Play</button>
+            <button class="sync-btn pause" onclick="syncPause('sync-cross-b')" style="display:none;">⏸ Pause</button>
+            <button class="sync-btn replay" onclick="syncReplay('sync-cross-b')">↺ Replay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CAMERA ZOOM ====== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 section-title">Dynamic Zoom Camera Control</h2>
+        <hr class="divider">
+        <div class="sync-group" id="sync-zoom">
+          <div class="sync-grid cols-3">
+            <div><video muted playsinline loop><source src="./static/videos/zoom2/Clip+AAP4N3KyLmM+P0+C1+F31348-31655_zoom.mp4" type="video/mp4"></video></div>
+            <div><video muted playsinline loop><source src="./static/videos/zoom2/A-5Tx1l5nZk_1920x1080_A-5Tx1l5nZk_1920x1080_full_video_012_A_01_scene_1_clip_001_zoom.mp4" type="video/mp4"></video></div>
+            <div><video muted playsinline loop><source src="./static/videos/zoom2/ZfjznQn0Yq4_1920x1080_ZfjznQn0Yq4_1920x1080_full_video_000_A_00_scene_1_clip_001_zoom.mp4" type="video/mp4"></video></div>
+            <div><video muted playsinline loop><source src="./static/videos/zoom2/VTygRN3BqwM__017_zoom.mp4" type="video/mp4"></video></div>
+            <div><video muted playsinline loop><source src="./static/videos/zoom2/r8sUWaKuQfc__061_zoom.mp4" type="video/mp4"></video></div>
+            <div><video muted playsinline loop><source src="./static/videos/zoom2/t-jkkKx-bXs__016_zoom.mp4" type="video/mp4"></video></div>
+          </div>
+          <div class="sync-controls">
+            <button class="sync-btn play" onclick="syncPlay('sync-zoom')">▶ Play</button>
+            <button class="sync-btn pause" onclick="syncPause('sync-zoom')" style="display:none;">⏸ Pause</button>
+            <button class="sync-btn replay" onclick="syncReplay('sync-zoom')">↺ Replay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CROSS ACT COMPARE ====== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 section-title">Comparison with State-of-the-Art</h2>
+        <hr class="divider">
+
+        <h4 class="title is-6 has-text-centered" style="margin-top:1.5rem;">Kid → Cross-Act A</h4>
+        <div class="sync-group" id="sync-cmp1">
+          <div class="sync-grid">
+            <div><video muted playsinline loop><source src="./static/videos/crossact/kid1__fZbAxSSbX4-5-rgb_front_clip_ours.mp4" type="video/mp4"></video><div class="vid-label ours">EMOSH (Ours)</div></div>
+            <div><video muted playsinline loop><source src="./static/videos/crossact/_fZbAxSSbX4-5-rgb_front_clip_rgb.mp4" type="video/mp4"></video><div class="vid-label">Driving Video</div></div>
+            <div><video muted playsinline loop><source src="./static/videos/crossact/kid1__fZbAxSSbX4-5-rgb_front_clip_hypermotion.mp4" type="video/mp4"></video><div class="vid-label">HyperMotion</div></div>
+            <div><video muted playsinline loop><source src="./static/videos/crossact/kid1__fZbAxSSbX4-5-rgb_front_clip_wan-animate.mp4" type="video/mp4"></video><div class="vid-label">Wan-Animate</div></div>
+          </div>
+          <div class="sync-controls">
+            <button class="sync-btn play" onclick="syncPlay('sync-cmp1')">▶ Play</button>
+            <button class="sync-btn pause" onclick="syncPause('sync-cmp1')" style="display:none;">⏸ Pause</button>
+            <button class="sync-btn replay" onclick="syncReplay('sync-cmp1')">↺ Replay</button>
+          </div>
+        </div>
+
+        <h4 class="title is-6 has-text-centered" style="margin-top:2rem;">Kid → Cross-Act B</h4>
+        <div class="sync-group" id="sync-cmp2">
+          <div class="sync-grid">
+            <div><video muted playsinline loop><source src="./static/videos/crossact/kid1_shaq_minbbcas1fu978_ours.mp4" type="video/mp4"></video><div class="vid-label ours">EMOSH (Ours)</div></div>
+            <div><video muted playsinline loop><source src="./static/videos/crossact/shaq_minbbcas1fu978_rgb.mp4" type="video/mp4"></video><div class="vid-label">Driving Video</div></div>
+            <div><video muted playsinline loop><source src="./static/videos/crossact/kid1_shaq_minbbcas1fu978_hypermotion.mp4" type="video/mp4"></video><div class="vid-label">HyperMotion</div></div>
+            <div><video muted playsinline loop><source src="./static/videos/crossact/kid1_shaq_minbbcas1fu978_wan-animate.mp4" type="video/mp4"></video><div class="vid-label">Wan-Animate</div></div>
+          </div>
+          <div class="sync-controls">
+            <button class="sync-btn play" onclick="syncPlay('sync-cmp2')">▶ Play</button>
+            <button class="sync-btn pause" onclick="syncPause('sync-cmp2')" style="display:none;">⏸ Pause</button>
+            <button class="sync-btn replay" onclick="syncReplay('sync-cmp2')">↺ Replay</button>
+          </div>
+        </div>
+
+        <h4 class="title is-6 has-text-centered" style="margin-top:2rem;">Man → Cross-Act</h4>
+        <div class="sync-group" id="sync-cmp3">
+          <div class="sync-grid">
+            <div><video muted playsinline loop><source src="./static/videos/crossact/man3_bzlYyhh3X0w_ours.mp4" type="video/mp4"></video><div class="vid-label ours">EMOSH (Ours)</div></div>
+            <div><video muted playsinline loop><source src="./static/videos/crossact/bzlYyhh3X0w_rgb.mp4" type="video/mp4"></video><div class="vid-label">Driving Video</div></div>
+            <div><video muted playsinline loop><source src="./static/videos/crossact/man3_bzlYyhh3X0w_hypermotion.mp4" type="video/mp4"></video><div class="vid-label">HyperMotion</div></div>
+            <div><video muted playsinline loop><source src="./static/videos/crossact/man3_bzlYyhh3X0w_wan-animate.mp4" type="video/mp4"></video><div class="vid-label">Wan-Animate</div></div>
+          </div>
+          <div class="sync-controls">
+            <button class="sync-btn play" onclick="syncPlay('sync-cmp3')">▶ Play</button>
+            <button class="sync-btn pause" onclick="syncPause('sync-cmp3')" style="display:none;">⏸ Pause</button>
+            <button class="sync-btn replay" onclick="syncReplay('sync-cmp3')">↺ Replay</button>
+          </div>
+        </div>
+
+        <h4 class="title is-6 has-text-centered" style="margin-top:2rem;">Woman → Cross-Act</h4>
+        <div class="sync-group" id="sync-cmp4">
+          <div class="sync-grid">
+            <div><video muted playsinline loop><source src="./static/videos/crossact/woman2_7Fiaew7nDmE__017_ours.mp4" type="video/mp4"></video><div class="vid-label ours">EMOSH (Ours)</div></div>
+            <div><video muted playsinline loop><source src="./static/videos/crossact/7Fiaew7nDmE__017_rgb.mp4" type="video/mp4"></video><div class="vid-label">Driving Video</div></div>
+            <div><video muted playsinline loop><source src="./static/videos/crossact/woman2_7Fiaew7nDmE__017_hypermotion.mp4" type="video/mp4"></video><div class="vid-label">HyperMotion</div></div>
+            <div><video muted playsinline loop><source src="./static/videos/crossact/woman2_7Fiaew7nDmE__017_wan-animate.mp4" type="video/mp4"></video><div class="vid-label">Wan-Animate</div></div>
+          </div>
+          <div class="sync-controls">
+            <button class="sync-btn play" onclick="syncPlay('sync-cmp4')">▶ Play</button>
+            <button class="sync-btn pause" onclick="syncPause('sync-cmp4')" style="display:none;">⏸ Pause</button>
+            <button class="sync-btn replay" onclick="syncReplay('sync-cmp4')">↺ Replay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== ABLATION ====== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 section-title">Ablation Studies</h2>
+        <hr class="divider">
+
+        <h4 class="title is-6 has-text-centered">Self-Driven Ablation</h4>
+        <div class="sync-group" id="sync-abl1">
+          <div class="sync-grid">
+            <div><video muted playsinline loop><source src="./static/videos/ablation/GT_NO_GdfSe9To_1920x1080_NO_GdfSe9To_1920x1080_full_video_083_B_00_scene_1_clip_001_rgb.mp4" type="video/mp4"></video><div class="vid-label">Ground Truth</div></div>
+            <div><video muted playsinline loop><source src="./static/videos/ablation/Ours_NO_GdfSe9To_1920x1080_NO_GdfSe9To_1920x1080_full_video_083_B_00_scene_1_clip_001_selfact.mp4" type="video/mp4"></video><div class="vid-label ours">EMOSH (Ours)</div></div>
+            <div><video muted playsinline loop><source src="./static/videos/ablation/rm_tracking_NO_GdfSe9To_1920x1080_NO_GdfSe9To_1920x1080_full_video_083_B_00_scene_1_clip_001_selfact.mp4" type="video/mp4"></video><div class="vid-label">w/o Tracker</div></div>
+            <div><video muted playsinline loop><source src="./static/videos/ablation/rm_hybidmotion_NO_GdfSe9To_1920x1080_NO_GdfSe9To_1920x1080_full_video_083_B_00_scene_1_clip_001_selfact.mp4" type="video/mp4"></video><div class="vid-label">w/o Hybrid Motion</div></div>
+          </div>
+          <div class="sync-controls">
+            <button class="sync-btn play" onclick="syncPlay('sync-abl1')">▶ Play</button>
+            <button class="sync-btn pause" onclick="syncPause('sync-abl1')" style="display:none;">⏸ Pause</button>
+            <button class="sync-btn replay" onclick="syncReplay('sync-abl1')">↺ Replay</button>
+          </div>
+        </div>
+
+        <h4 class="title is-6 has-text-centered" style="margin-top:2rem;">Cross-Driven Ablation</h4>
+        <div class="sync-group" id="sync-abl2">
+          <div class="sync-grid">
+            <div><video muted playsinline loop><source src="./static/videos/ablation/ours_man4_xJqLcJnRnnc_clip.mp4" type="video/mp4"></video><div class="vid-label ours">EMOSH (Full)</div></div>
+            <div><video muted playsinline loop><source src="./static/videos/ablation/target_man4_xJqLcJnRnnc_clip.mp4" type="video/mp4"></video><div class="vid-label">Driving Video</div></div>
+            <div><video muted playsinline loop><source src="./static/videos/ablation/wo_disentanglement_man4_xJqLcJnRnnc_clip.mp4" type="video/mp4"></video><div class="vid-label">w/o Disentanglement</div></div>
+            <div><video muted playsinline loop><source src="./static/videos/ablation/wo_sac_man4_xJqLcJnRnnc_clip.mp4" type="video/mp4"></video><div class="vid-label">w/o Spatial Align</div></div>
+          </div>
+          <div class="sync-controls">
+            <button class="sync-btn play" onclick="syncPlay('sync-abl2')">▶ Play</button>
+            <button class="sync-btn pause" onclick="syncPause('sync-abl2')" style="display:none;">⏸ Pause</button>
+            <button class="sync-btn replay" onclick="syncReplay('sync-abl2')">↺ Replay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== TRACKING ====== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 section-title">Motion Tracking Comparison</h2>
+        <hr class="divider">
+
+        <h4 class="title is-6 has-text-centered">Case 1</h4>
+        <div class="sync-group" id="sync-trk1">
+          <div class="sync-grid cols-3">
+            <div><video muted playsinline loop><source src="./static/videos/track2/ours_2lKj7Nkmxcc.mp4" type="video/mp4"></video><div class="vid-label ours">EMOSH Tracker (Ours)</div></div>
+            <div><video muted playsinline loop><source src="./static/videos/track2/guava_2lKj7Nkmxcc.mp4" type="video/mp4"></video><div class="vid-label">GUAVA Tracker</div></div>
+            <div><video muted playsinline loop><source src="./static/videos/track2/rgb_2lKj7Nkmxcc.mp4" type="video/mp4"></video><div class="vid-label">Original Video</div></div>
+          </div>
+          <div class="sync-controls">
+            <button class="sync-btn play" onclick="syncPlay('sync-trk1')">▶ Play</button>
+            <button class="sync-btn pause" onclick="syncPause('sync-trk1')" style="display:none;">⏸ Pause</button>
+            <button class="sync-btn replay" onclick="syncReplay('sync-trk1')">↺ Replay</button>
+          </div>
+        </div>
+
+        <h4 class="title is-6 has-text-centered" style="margin-top:2rem;">Case 2</h4>
+        <div class="sync-group" id="sync-trk2">
+          <div class="sync-grid cols-3">
+            <div><video muted playsinline loop><source src="./static/videos/track2/ours_4098644.mp4" type="video/mp4"></video><div class="vid-label ours">EMOSH Tracker (Ours)</div></div>
+            <div><video muted playsinline loop><source src="./static/videos/track2/guava_4098644.mp4" type="video/mp4"></video><div class="vid-label">GUAVA Tracker</div></div>
+            <div><video muted playsinline loop><source src="./static/videos/track2/rgb_4098644.mp4" type="video/mp4"></video><div class="vid-label">Original Video</div></div>
+          </div>
+          <div class="sync-controls">
+            <button class="sync-btn play" onclick="syncPlay('sync-trk2')">▶ Play</button>
+            <button class="sync-btn pause" onclick="syncPause('sync-trk2')" style="display:none;">⏸ Pause</button>
+            <button class="sync-btn replay" onclick="syncReplay('sync-trk2')">↺ Replay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== METHOD ====== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <hr class="divider">
+        <img src="./static/images/pipeline.png" style="width:100%;max-width:100%;border-radius:8px;" alt="Pipeline">
+        <p style="font-size:0.85em;margin-top:1rem;">
+          The overall pipeline of EMOSH. Given a reference image and a driving video, we first track the EHM parameters.
+          The motion features are injected in a coarse-to-fine manner through the Hybrid Motion Injection module.
+          Spatially-Aligned Conditioning bridges the domain gap to ensure identity consistency.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== BIBTEX ====== -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <hr class="divider">
+    <pre><code>@inproceedings{zhang2026emosh,
+  title={EMOSH: Expressive Motion and Shape Disentanglement for Human Animation},
+  author={Zhang, Dongbin and Liu, Hao and Dai, Binquan and Chen, Kangjie and Wang, Chuming and Li, Chen and LYU, Jing and Wang, Haoqian},
+  booktitle={European Conference on Computer Vision (ECCV)},
+  year={2026}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+          <p>The source code is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>, we thank the authors for sharing the templates.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function getVs(id) { return document.querySelectorAll('#' + id + ' video'); }
+function syncPlay(id) {
+  var vs = getVs(id);
+  vs.forEach(function(v) { v.currentTime = 0; });
+  requestAnimationFrame(function() { vs.forEach(function(v) { v.play().catch(function(){}); }); });
+  toggleBtns(id, true);
+}
+function syncPause(id) {
+  getVs(id).forEach(function(v) { v.pause(); });
+  toggleBtns(id, false);
+}
+function syncReplay(id) { syncPlay(id); }
+function toggleBtns(id, playing) {
+  var el = document.getElementById(id); if (!el) return;
+  var pb = el.querySelector('.sync-btn.play'), sb = el.querySelector('.sync-btn.pause');
+  if (!pb || !sb) return;
+  pb.style.display = playing ? 'none' : 'inline-block';
+  sb.style.display = playing ? 'inline-block' : 'none';
+}
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.sync-group').forEach(function(g) {
+    g.querySelectorAll('video').forEach(function(v) {
+      v.addEventListener('ended', function() {
+        var vs = getVs(g.id);
+        vs.forEach(function(v2) { v2.currentTime = 0; });
+        requestAnimationFrame(function() { vs.forEach(function(v2) { v2.play().catch(function(){}); }); });
+      });
+    });
+  });
+});
+</script>
+
+</body>
+</html>
