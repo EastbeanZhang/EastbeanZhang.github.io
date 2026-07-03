@@ -40,7 +40,7 @@ My research interests lie in world models, video generation, and 3D vision.
 <div class='paper-box-text' markdown="1">
 
 <a href="https://arxiv.org/abs/xxxx.xxxxx" style="font-size: 22px; color: #483D8B; text-decoration: none">**EMOSH: Expressive Motion and Shape Disentanglement for Human Animation**</a><br>
-<span style="font-size: 18px;">**Dongbin Zhang\*** , Hao Liu, Binquan Dai, Kangjie Chen, Chuming Wang, Chen Li†, Jing LYU, Haoqian Wang†</span><br>
+<span style="font-size: 18px;">**Dongbin Zhang**, Hao Liu, Binquan Dai, Kangjie Chen, Chuming Wang, Chen Li†, Jing LYU, Haoqian Wang†</span><br>
 <span style="font-size: 18px;">[**Page**](https://eastbeanzhang.github.io/EMOSH/)   [**Paper**](./EMOSH/static/EMOSH_ECCV2026.pdf)</span>
 
 <span style="font-size: 18px;">-  EMOSH achieves high-fidelity, mesh-guided expressive human animation with explicit motion-shape disentanglement, preventing body shape leakage from the driving subject.</span>
