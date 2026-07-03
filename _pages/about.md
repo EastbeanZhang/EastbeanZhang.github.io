@@ -30,6 +30,7 @@ My research interests lie in 3D computer vision and video generation, focusing o
 # 💻 Experience
 
 - 2024.08 ~ 2025.03, I was a research intern at the [IDEA](https://www.idea.edu.cn/), advised by [Yu Li](https://yu-li.github.io/) and [Yunfei Liu](https://liuyunfei.net/).
+- 2025.07 ~ 2026.03, I was a research intern at the WeChat Vision, Tencent Inc.
 
 <br>
 
