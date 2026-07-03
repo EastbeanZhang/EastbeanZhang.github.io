@@ -22,7 +22,7 @@ I received my M.S. degree in Electronic Information (Artificial Intelligence) fr
 
 Currently I work at XPeng GWM team.
 
-My research interests lie in 3D computer vision and video generation, focusing on human-centric tasks like animatable digital avatar creation and 3D scene reconstruction. 
+My research interests lie in world models, video generation, and 3D vision, focusing on human-centric tasks like animatable digital avatar creation and 3D scene reconstruction. 
 
 <br>
 
