@@ -20,7 +20,7 @@ redirect_from:
 
 I received my M.S. degree in Electronic Information (Artificial Intelligence) from [Tsinghua University](https://www.tsinghua.edu.cn/en/) <img src='./images/thu.png' style='width: 2em;'> in 2026, under the guidance of [Prof. Haoqian Wang](https://www.sigs.tsinghua.edu.cn/whq/). I got B.Eng. degree in Robot Engineering at [South China University of Technology](https://www.scut.edu.cn/) <img src='./images/scut.jpg' style='width: 2em;'>. 
 
-Currently I work at XPeng GWM team.
+Currently, I work on the GWM (Generative World Model) team at [XPeng](https://www.xpeng.com/) <img src='./images/xpeng.svg' alt='XPeng logo' style='width: 2em; vertical-align: middle;'>.
 
 My research interests lie in world models, video generation, and 3D vision. 
 
@@ -41,7 +41,7 @@ My research interests lie in world models, video generation, and 3D vision.
 
 <a href="https://arxiv.org/abs/xxxx.xxxxx" style="font-size: 22px; color: #483D8B; text-decoration: none">**EMOSH: Expressive Motion and Shape Disentanglement for Human Animation**</a><br>
 <span style="font-size: 18px;">**Dongbin Zhang**, Hao Liu, Binquan Dai, Kangjie Chen, Chuming Wang, Chen Li†, Jing LYU, Haoqian Wang†</span><br>
-<span style="font-size: 18px;">[**Page**](https://eastbeanzhang.github.io/EMOSH/)   [**Paper**](./EMOSH/static/EMOSH_ECCV2026.pdf)</span>
+<span style="font-size: 18px;">[**Page**](https://eastbeanzhang.github.io/EMOSH/)   [**Paper**](./EMOSH/static/EMOSH_ECCV2026.pdf)   [**Code**](https://github.com/EastbeanZhang/EMOSH)   [**Tracker Code**](https://github.com/EastbeanZhang/EMOSH-Tracker)</span>
 
 <span style="font-size: 18px;">-  EMOSH achieves high-fidelity, mesh-guided expressive human animation with explicit motion-shape disentanglement, preventing body shape leakage from the driving subject.</span>
 
@@ -53,7 +53,7 @@ My research interests lie in world models, video generation, and 3D vision.
 
 <a href="https://arxiv.org/abs/2304.01054" style="font-size: 22px; color: #483D8B; text-decoration: none">**GUAVA: Generalizable Upper Body 3D Gaussian Avatar**</a><br>
 <span style="font-size: 18px;"> **Dongbin Zhang**, Yunfei Liu†, Lijian Lin, Ye Zhu, Yang Li, Minghan Qin, Yu Li‡, Haoqian Wang†</span><br>
-<span style="font-size: 18px;">[**Page**](https://eastbeanzhang.github.io/GUAVA/) [**Paper**](https://arxiv.org/pdf/2505.03351v1)</span>
+<span style="font-size: 18px;">[**Page**](https://eastbeanzhang.github.io/GUAVA/) [**Paper**](https://arxiv.org/pdf/2505.03351v1)   [**Code**](https://github.com/Pixel-Talk/GUAVA)   [**Tracker Code**](https://github.com/Pixel-Talk/EHM-Tracker)</span>
 
 <span style="font-size: 18px;">-  We propose GUAVA, the first framework for fast animatable upper-body 3D Gaussian avatar reconstruction from a single image.</span>
 
