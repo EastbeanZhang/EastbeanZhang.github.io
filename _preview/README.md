@@ -34,10 +34,10 @@ No commit, push, or deployment is required for this preview.
 All previews are derived from existing videos on the author's research project
 pages, with no synthesized research results:
 
-| Project | Source files used by make_previews.py | Edit |
+| Project | Source files | Edit |
 | --- | --- | --- |
 | [EMOSH](https://eastbeanzhang.github.io/EMOSH/) | `emosh-mesh.mp4`, `emosh-woman.mp4`, `emosh.mp4` | Synchronized driving mesh/result pairs; woman then man, 4.8s each |
-| [GUAVA](https://eastbeanzhang.github.io/GUAVA/) | `guava-novel.mp4` (`show-novel-views-ani.mp4`) | First two panels, preserving reference insets; first 12s |
+| [GUAVA](https://eastbeanzhang.github.io/GUAVA/) | `guava-cross.mp4` (`show-cross-reenactment.mp4`) | Cyan/purple subjects with reference insets, 1–13s; postprocessed white background |
 | [HRAvatar](https://eastbeanzhang.github.io/HRAvatar/) | `hravatar.mp4` (`show_animation_relighting.mp4`) | First two subjects, 0.5–10.5s, showing expressions and changing lighting |
 | [GS-W](https://eastbeanzhang.github.io/GS-W/) | `gsw.mp4` | Full Brandenburg Gate view/appearance sequence at 2.5× speed |
 
@@ -50,7 +50,10 @@ Aspect ratios are preserved with padding. JPEG posters are sampled from each
 finished preview. To regenerate, put the named source files in a directory and
 run `python3 _preview/make_previews.py /path/to/sources` with ffmpeg available.
 
-The checked GUAVA originals have black backgrounds, not alpha transparency.
-A local white-background experiment was rejected because it could alter dark
-subject details and produce unnatural edges. The shipped preview retains the
-original background; the surrounding webpage is white.
+The homepage uses the approved white-background GUAVA animation
+preview. This is a postprocessed version of the black-background source, not a
+native alpha render. Reproduce it separately with
+`python3 _preview/guava/make_candidates.py /path/to/sources`; its macOS Vision
+pipeline and limitations are documented in `_preview/guava/README.md`.
+The main `make_previews.py` still reproduces the earlier black-background GUAVA
+asset for reference; it does not overwrite the selected white-background file.

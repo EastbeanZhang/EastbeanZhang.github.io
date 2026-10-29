@@ -46,11 +46,11 @@ redirect_from:
     <article class="paper" aria-labelledby="guava-title">
       <figure class="paper-media">
         <div class="video-frame">
-          <video muted loop playsinline preload="none" poster="/assets/previews/guava.jpg" data-src="/assets/previews/guava.mp4" aria-hidden="true" data-name="GUAVA"></video>
-          <img class="preview-fallback" src="/assets/previews/guava.jpg" alt="" hidden>
+          <video muted loop playsinline preload="none" poster="/assets/previews/guava-white-animation-clean.jpg" data-src="/assets/previews/guava-white-animation-clean.mp4" aria-hidden="true" data-name="GUAVA"></video>
+          <img class="preview-fallback" src="/assets/previews/guava-white-animation-clean.jpg" alt="" hidden>
           <button class="video-control" type="button" aria-label="Play GUAVA preview" hidden><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg></button>
         </div>
-        <figcaption>Single-image avatars · animation and novel views</figcaption>
+        <figcaption>Single-image avatars · cross-identity animation</figcaption>
       </figure>
       <div class="paper-info">
         <span class="venue">ICCV 2025</span>
