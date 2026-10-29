@@ -39,7 +39,7 @@ pages, with no synthesized research results:
 | [EMOSH](https://eastbeanzhang.github.io/EMOSH/) | `emosh-mesh.mp4`, `emosh-woman.mp4`, `emosh.mp4` | Synchronized driving mesh/result pairs; woman then man, 4.8s each |
 | [GUAVA](https://eastbeanzhang.github.io/GUAVA/) | `guava-novel.mp4` (`show-novel-views-ani.mp4`) | First two panels, preserving reference insets; first 12s |
 | [HRAvatar](https://eastbeanzhang.github.io/HRAvatar/) | `hravatar.mp4` (`show_animation_relighting.mp4`) | First two subjects, 0.5–10.5s, showing expressions and changing lighting |
-| [GS-W](https://eastbeanzhang.github.io/GS-W/) | `gsw-sacre.mp4` | Full Sacré-Cœur view/appearance sequence at 2.5× speed |
+| [GS-W](https://eastbeanzhang.github.io/GS-W/) | `gsw.mp4` | Full Brandenburg Gate view/appearance sequence at 2.5× speed |
 
 The EMOSH sources are in `static/videos/crossact/`:
 `buleman_dance_mesh.mp4`, `woman3_to_buleman_dance_crossact.mp4`, and

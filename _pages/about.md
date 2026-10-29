@@ -90,11 +90,11 @@ redirect_from:
     <article class="paper" aria-labelledby="gsw-title">
       <figure class="paper-media">
         <div class="video-frame">
-          <video muted loop playsinline preload="none" poster="/assets/previews/gsw.jpg" data-src="/assets/previews/gsw.mp4" aria-hidden="true" data-name="GSW"></video>
-          <img class="preview-fallback" src="/assets/previews/gsw.jpg" alt="" hidden>
+          <video muted loop playsinline preload="none" poster="/assets/previews/gsw-brandenburg.jpg" data-src="/assets/previews/gsw-brandenburg.mp4" aria-hidden="true" data-name="GSW"></video>
+          <img class="preview-fallback" src="/assets/previews/gsw-brandenburg.jpg" alt="" hidden>
           <button class="video-control" type="button" aria-label="Play GSW preview" hidden><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg></button>
         </div>
-        <figcaption>Novel views · changing appearance · Sacré-Cœur</figcaption>
+        <figcaption>Novel views · changing appearance · Brandenburg Gate</figcaption>
       </figure>
       <div class="paper-info">
         <span class="venue">ECCV 2024</span>

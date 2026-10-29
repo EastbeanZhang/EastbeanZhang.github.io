@@ -46,11 +46,11 @@ encode('hravatar', ['hravatar.mp4'],
        'pad=720:450:0:(oh-ih)/2:color=0x101725,setsar=1')
 
 # Preserve the full appearance/view sequence at 2.5x speed; no image geometry is stretched.
-encode('gsw', ['gsw-sacre.mp4'],
+encode('gsw-brandenburg', ['gsw.mp4'],
        'setpts=0.4*(PTS-STARTPTS),fps=24,scale=720:450:force_original_aspect_ratio=decrease:force_divisible_by=2,'
        'pad=720:450:(ow-iw)/2:(oh-ih)/2:color=0x101725,setsar=1')
 
-for name, timestamp in [('emosh', 2), ('guava', 4), ('hravatar', 3), ('gsw', 8)]:
+for name, timestamp in [('emosh', 2), ('guava', 4), ('hravatar', 3), ('gsw-brandenburg', 4.8)]:
     subprocess.run(['ffmpeg', '-y', '-hide_banner', '-loglevel', 'error', '-ss', str(timestamp),
                     '-i', str(out / (name + '.mp4')), '-frames:v', '1', '-q:v', '3',
                     str(out / (name + '.jpg'))], check=True)
