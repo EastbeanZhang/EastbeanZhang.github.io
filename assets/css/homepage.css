@@ -164,7 +164,7 @@ svg.icon {
   gap:7px;
   color:var(--muted);
   font-size:15px;
-  margin:11px 0 24px;
+  margin:11px 0 0;
 }
 .location .icon {
   width:14px;
@@ -196,12 +196,16 @@ svg.icon {
   color:#9ca6b7;
 }
 .personal-note {
+  display:flex;
+  align-items:center;
+  gap:7px;
   color:var(--muted);
   font-size:14px;
-  margin:28px 0 0;
+  margin:7px 0 24px;
 }
 .personal-note span {
-  margin-right:5px;
+  width:14px;
+  flex-shrink:0;
 }
 main {
   min-width:0;
@@ -294,13 +298,14 @@ h2 {
 }
 .paper-list {
   display:grid;
-  gap:18px;
+  max-width:840px;
+  gap:14px;
 }
 .paper {
   display:grid;
   grid-template-columns:minmax(0, .9fr) minmax(0, 1.4fr);
-  gap:24px;
-  padding:22px;
+  gap:20px;
+  padding:16px 20px;
   background:var(--surface);
   border:1px solid var(--line);
   border-radius:var(--radius);
@@ -382,7 +387,7 @@ h2 {
   font-size:14px;
   color:#4f5d70;
   line-height:1.5;
-  margin-top:9px;
+  margin-top:6px;
   text-align:center;
   letter-spacing:.1px;
 }
@@ -401,7 +406,7 @@ h2 {
   letter-spacing:.2px;
   line-height:1.5;
   border-radius:4px;
-  margin-bottom:9px;
+  margin-bottom:6px;
 }
 .venue::before {
   content:"";
@@ -415,7 +420,7 @@ h2 {
   letter-spacing:-.3px;
   line-height:1.4;
   font-weight:650;
-  margin:0 0 9px;
+  margin:0 0 6px;
 }
 .paper h3 a {
   color:var(--ink);
@@ -429,7 +434,7 @@ h2 {
   font-size:15px;
   line-height:1.75;
   color:#4f5d70;
-  margin:0 0 10px;
+  margin:0 0 7px;
 }
 .authors > span {
   display:inline-block;
@@ -446,7 +451,7 @@ h2 {
   font-size:16px;
   line-height:1.7;
   color:#4f5d70;
-  margin:0 0 15px;
+  margin:0 0 10px;
 }
 .paper-links {
   display:flex;
@@ -557,7 +562,8 @@ h2 {
   color:#4f5d70;
 }
 .award-year {
-  width:64px;
+  width:80px;
+  white-space:nowrap;
   flex-shrink:0;
   color:#4f5d70;
   font-size:14px;
@@ -602,8 +608,8 @@ h2 {
     height:135px;
   }
   .paper {
-    gap:18px;
-    padding:18px;
+    gap:16px;
+    padding:14px 16px;
     grid-template-columns:minmax(0,.85fr) minmax(0,1.4fr);
   }
   .paper h3 {
@@ -671,7 +677,8 @@ h2 {
     font-size:16px;
   }
   .personal-note {
-    display:none;
+    grid-column:2;
+    margin:5px 0 0;
   }
   .about h2 {
     font-size:29px;
@@ -691,8 +698,8 @@ h2 {
   }
   .paper {
     grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);
-    gap:22px;
-    padding:20px;
+    gap:18px;
+    padding:14px 18px;
   }
   .paper h3 {
     font-size:22px;
@@ -763,8 +770,8 @@ h2 {
   }
   .paper {
     grid-template-columns:1fr;
-    gap:16px;
-    padding:16px;
+    gap:12px;
+    padding:12px 16px;
     border-radius:13px;
   }
   .video-frame {
@@ -821,7 +828,7 @@ h2 {
     font-size:16px;
   }
   .award-year {
-    width:56px;
+    width:76px;
     font-size:14px;
   }
   .site-footer {
